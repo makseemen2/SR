@@ -67,3 +67,62 @@ elif len(string) % 2 == 1 and len (string) % 3 == 0
     else:
         print('exit')
 
+
+
+
+
+SR 3
+
+
+
+
+import math
+import numpy as np
+
+a = float(input("a="))
+b = float(input("b="))
+h = float(input("h="))
+for x in np.arange(a,b+h,h):
+    y = (math.exp(x)+math.cos(x))/(x**(1/3)+math.atan(x)+1)
+    print(y)
+
+
+def info(a):
+    if a<0:
+        print("-")
+        a = -a
+    else:
+        print("+")
+
+    if int(a) == a:
+        print("int")
+    else:
+        print("float")
+
+    if(a%2):
+        print("odd")
+    else:
+        print("even")
+
+    if int(a) == a:
+        print(len(str(a)) - 2)
+        print("0")
+    else:
+        print(len(str(a)) - 1)
+        print(len(str(a)) - len(str(int(a))) - 1)
+
+
+a = float(input("a="))
+info(a)
+
+
+3.
+def found(a):
+    f = open('text.txt', encoding='utf-8')
+    for line in f:
+        if a in line:
+            print(line)
+
+
+a = input("a=")
+found(a)
